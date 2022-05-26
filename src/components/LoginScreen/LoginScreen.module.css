@@ -1,0 +1,87 @@
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.loginContainer img {
+  width: 45px;
+  margin-bottom: 30px;
+}
+
+.loginContainer > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--mid-black);
+  height: 50vh;
+  width: 30vw;
+  border-radius: 10px;
+  padding: 40px 30px;
+}
+
+.loginContainer > div > div:nth-child(1) {
+  text-align: center;
+
+}
+
+.loginContainer > div > div:nth-child(1) h2 {
+  margin-bottom: 3px;
+}
+
+.loginContainer > div > div:nth-child(1) p {
+  font-weight: 200;
+}
+
+.loginContainer > div > form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 62%;
+}
+
+.loginContainer > div > form label {
+  position: relative;
+}
+
+.loginContainer i {
+  color: var(--pink);
+  position: absolute;
+  top: 11px;
+  left: 15px;
+}
+
+.loginContainer > div > form input {
+  color: var(--white);
+  width: 100%;
+  border: 1px solid var(--pink);
+  height: 6vh;
+  border-radius: 7px;
+  background-color: var(--mid-black);
+  outline: none;
+  padding: 0 0 0 40px;
+}
+
+.loginContainer > div > form button {
+  width: 100%;
+  color: var(--white);
+  border: none;
+  height: 6vh;
+  border-radius: 7px;
+  background-color: var(--pink);
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+}
+
+.loginContainer > div > form button:disabled {
+  color: var(--white);
+  background-color: rgb(65, 65, 65);
+}
+
+.loginContainer > div > form button:active:hover {
+  background-color: var(--pink-heavy);
+}

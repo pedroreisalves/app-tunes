@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+:root {
+  --white: rgb(240, 240, 240);
+  --pink-heavy: rgb(162, 25, 70);
+  --pink: rgb(233, 30, 99);
+  --mid-black: rgb(35, 35, 35);
+  --black: rgb(25, 25, 25);
+  --shadow: rgb(10, 10, 10);
+}
