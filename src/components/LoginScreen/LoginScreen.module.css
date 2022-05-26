@@ -21,7 +21,7 @@
   height: 50vh;
   width: 30vw;
   border-radius: 10px;
-  padding: 40px 30px;
+  padding: 40px;
 }
 
 .loginContainer > div > div:nth-child(1) {
@@ -59,7 +59,7 @@
   color: var(--white);
   width: 100%;
   border: 1px solid var(--pink);
-  height: 6vh;
+  height: 40px;
   border-radius: 7px;
   background-color: var(--mid-black);
   outline: none;
@@ -70,7 +70,7 @@
   width: 100%;
   color: var(--white);
   border: none;
-  height: 6vh;
+  height: 40px;
   border-radius: 7px;
   background-color: var(--pink);
   transition: all 300ms ease-in-out;
