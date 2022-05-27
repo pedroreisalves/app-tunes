@@ -1,15 +1,15 @@
 .sideBar {
   height: 100vh;
-  width: 17vw;
+  width: 17%;
   background-color: var(--black);
-  margin-right: 1px solid var(--mid-black);
+  position: fixed;
 }
 
 .logoContainer {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 10%;
+  height: 11.1vh;
   border-bottom: 1px solid var(--mid-black);
 }
 
@@ -36,6 +36,15 @@
   padding: 7px 12px;
   margin: 5px 0;
   border-radius: 10px;
+  transition: all .3s ease-out;
+}
+
+.navItem h4 {
+  font-size: 0.9rem;
+}
+
+.navItem:not(.selectedRoute):hover {
+  background-color: var(--mid-black);
 }
 
 .navItem i {

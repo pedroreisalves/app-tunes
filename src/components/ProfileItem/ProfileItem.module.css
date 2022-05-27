@@ -1,0 +1,17 @@
+.Profile {
+  display: flex;
+  align-items: center;
+}
+
+.Profile p {
+  font-weight: 500;
+  color: var(--light-grey);
+}
+
+.Profile img {
+  width: 30px;
+  height: 30px;
+  border-radius: 20%;
+  border: 1px solid var(--mid-black);
+  margin-left: 10px;
+}

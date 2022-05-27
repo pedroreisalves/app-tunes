@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import propTypes from 'prop-types';
 import SideBar from '../components/SideBar/SideBar'
+import SearchScreen from '../components/SearchScreen/SearchScreen';
 
 export default class Search extends Component {
   render() {
@@ -8,6 +9,7 @@ export default class Search extends Component {
     return (
       <>
         <SideBar history={ history } />
+        <SearchScreen />
       </>
     )
   }

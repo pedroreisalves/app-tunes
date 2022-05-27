@@ -1,0 +1,127 @@
+.searchScreen {
+  min-height: 100vh;
+  width: 83%;
+  background-color: var(--black);
+  margin-left: 17%;
+  border: 1px solid var(--mid-black);
+}
+
+.searchBar header {
+  height: 11vh;
+  display: flex;
+  padding: 0 45px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--mid-black);
+}
+
+.searchBar header div:nth-child(1) {
+  color: var(--light-grey);
+  display: flex;
+  font-weight: 300;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.searchBar header div:nth-child(1) i {
+  margin-right: 7.5px;
+  font-size: 1rem;
+}
+
+.searchBar > div {
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.searchBar div label {
+  position: relative;
+}
+
+.searchBar div input {
+  width: 400px;
+  height: 40px;
+  border: 1px solid var(--pink);
+  border-radius: 20px;
+  background-color: var(--mid-black);
+  outline: none;
+  padding: 0 15px;
+  color: var(--white);
+}
+
+.searchBar div button {
+  border-radius: 100%;
+  border: none;
+  padding: 5px 8px;
+  position: absolute;
+  top: 6px;
+  right: 7.5px;
+  background-color: var(--pink);
+  color: var(--light-grey);
+  cursor: pointer;
+  transition: all .3s ease-out;
+}
+
+.searchBar div button:disabled {
+  background-color: var(--black);
+}
+
+.searchBar div button:not(:disabled):hover {
+  background-color: var(--pink-heavy);
+}
+
+.albunsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+.albunsContainer a {
+  text-decoration: none;
+}
+
+.album {
+  cursor: pointer;
+  margin: 10px 15px;
+  width: 175px;
+  height: 275px;
+  color: var(--white);
+  border: 1px solid var(--mid-black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  animation: fromBottom .5s ease-out;
+}
+
+.album img {
+  width: 80%;
+  margin: 15px;
+}
+
+.album div {
+  height: 40%;
+  border-top: 1px solid var(--mid-black);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.album div p {
+  margin-top: 5px;
+  font-size: 0.8rem;
+}
+
+@keyframes fromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
