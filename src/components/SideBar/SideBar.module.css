@@ -1,0 +1,66 @@
+.sideBar {
+  height: 100vh;
+  width: 17vw;
+  background-color: var(--black);
+  margin-right: 1px solid var(--mid-black);
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10%;
+  border-bottom: 1px solid var(--mid-black);
+}
+
+.logoContainer img {
+  width: 2rem;
+  margin-right: 5px;
+}
+
+.logoContainer h3 {
+  color: var(--white);
+  font-weight: 300;
+}
+
+.nav {
+  padding: 20px 30px;
+}
+
+.navItem {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: var(--light-grey);
+  padding: 7px 12px;
+  margin: 5px 0;
+  border-radius: 10px;
+}
+
+.navItem i {
+  font-size: 0.85rem;
+  margin-right: 10px;
+  width: 16px;
+}
+
+.navItem h4 {
+  font-weight: 300;
+}
+
+.selectedRoute {
+  background-color: var(--pink);
+  color: var(--black);
+  animation: joinRoute .5s ease-out;
+}
+
+@keyframes joinRoute {
+  0% {
+    background-color: var(--black);
+    color: var(--light-grey);
+  }
+  100% {
+    background-color: var(--pink);
+    color: var(--black);
+  }
+}
