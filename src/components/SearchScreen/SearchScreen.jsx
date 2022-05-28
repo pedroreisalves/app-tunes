@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { getAlbum } from '../../services/album';
+import { getAlbum } from '../../services/artist';
 import ProfileItem from '../ProfileItem/ProfileItem';
 import styles from './SearchScreen.module.css';
 
@@ -21,7 +21,10 @@ export default class SearchScreen extends Component {
       <div className={ styles.searchScreen }>
         <div className={ styles.searchBar }>
           <header>
-            <div><i className="fa-solid fa-angle-right"></i>Search</div>
+            <div>
+              <i className="fa-solid fa-angle-right"></i>
+              <span>Search</span>
+            </div>
             <ProfileItem />
           </header>
           <div>

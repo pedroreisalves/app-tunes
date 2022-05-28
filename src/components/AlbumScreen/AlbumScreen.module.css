@@ -1,0 +1,91 @@
+.Album {
+  margin-left: 17%;
+  width: 83%;
+  min-height: 100vh;
+  background-color: var(--black);
+  border-left: 1px solid var(--mid-black);
+}
+
+.Album header {
+  height: 11.1vh;
+  display: flex;
+  padding: 0 45px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--mid-black);
+}
+
+.Album header div:nth-child(1) {
+  color: var(--light-grey);
+  display: flex;
+  font-weight: 300;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.Album header div:nth-child(1) i {
+  margin: 0 7.5px;
+  font-size: 1rem;
+}
+
+.albunsContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.albunsContainer > div:nth-child(1) {
+  color: var(--white);
+  display: flex;
+  padding: 40px 60px;
+  width: 100%;
+  border-bottom: 1px solid var(--mid-black);
+}
+
+.albunsContainer > div:nth-child(1) img {
+  width: 200px;
+  border-radius: 10px;
+}
+
+.albunsContainer > div:nth-child(1) > div {
+  padding: 10px 20px;
+}
+
+.albunsContainer > div:nth-child(1) > div p:nth-child(3) {
+  font-size: 0.9rem;
+  font-weight: 200;
+}
+
+.albunsContainer > div:nth-child(1) > div p:nth-child(2) {
+  margin: 0 0 4px;
+  font-weight: 300;
+  font-size: 1.3rem;
+}
+
+.albunsContainer > div:nth-child(1) > div h3 {
+  font-size: 1.6rem;
+}
+
+.albunsContainer > div:nth-child(2) {
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 40px;
+} 
+
+.albunsContainer > div:nth-child(2) div {
+  margin-bottom: 15px;
+  width: 96.5%;
+}
+
+.albunsContainer > div:nth-child(2) div h4 {
+  font-weight: 300;
+}
+
+.albunsContainer > div:nth-child(2) audio {
+  width: 100%;
+  margin-top: 7.5px;
+  outline: none;
+  border: none;
+}
