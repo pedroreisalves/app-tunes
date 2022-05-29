@@ -49,6 +49,10 @@ export default class LoginScreen extends Component {
                 type="text"
                 id="email"
                 onChange={ ({ target }) => this.setState({ [target.id]: target.value }) }
+                onKeyUp={
+                  ({ key }) => (key === 'Enter' && !this.verify(email, username))
+                  && this.login(email, username)
+                }
                 placeholder="Enter your email"
               />
             </label>
@@ -56,7 +60,7 @@ export default class LoginScreen extends Component {
               type="button"
               disabled={ this.verify(email, username) }
               onClick={ () => this.login(email, username) }
-            >
+            > 
               Login
             </button>
           </form>

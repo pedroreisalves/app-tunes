@@ -1,6 +1,18 @@
+a {
+  text-decoration: none;
+}
+
 .Profile {
   display: flex;
+  cursor: pointer;
   align-items: center;
+  padding: 5px 10px;
+  border-radius: 10px;
+  transition: all .3s ease-out;
+}
+
+.Profile:hover {
+  background-color: var(--mid-black);
 }
 
 .Profile p {

@@ -9,7 +9,7 @@
 .searchBar header {
   height: 11vh;
   display: flex;
-  padding: 0 45px;
+  padding: 0 35px 0 45px;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid var(--mid-black);
@@ -68,6 +68,21 @@
 
 .searchBar div button:not(:disabled):hover {
   background-color: var(--pink-heavy);
+}
+
+.startImage {
+  text-align: center;
+  color: var(--light-grey);
+  padding-top: 60px;
+}
+
+.startImage h2 {
+  font-weight: 200;
+  padding-top: 40px;
+}
+
+.startImage img {
+  width: 250px;
 }
 
 .albunsContainer {

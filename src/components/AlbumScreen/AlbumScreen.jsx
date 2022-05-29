@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { getMusics } from '../../services/album';
+import { getFavorites, favorites } from '../../services/user';
 import ProfileItem from '../ProfileItem/ProfileItem';
 import styles from './AlbumScreen.module.css';
 
@@ -7,18 +8,31 @@ export default class AlbumScreen extends Component {
   state = {
     musics: [],
     album: {},
+    favorites: [],
   }
 
   componentDidMount() {
     this.getAlbum();
+    this.setState({ favorites: getFavorites(), });
   }
 
   getAlbum = async () => {
     const { match: { params: { id } } } = this.props;
     let musics = await getMusics(id);
     const album = musics[0];
-    musics = musics.filter((music, index) => index > 0);
+    musics = musics.filter((_music, index) => index > 0);
     this.setState({ musics, album });
+  }
+
+  verifyFavorite = (music) => {
+    const { favorites } = this.state;
+    const some = favorites.some((favorite) => favorite.trackId === music.trackId);
+    return some;
+  }
+
+  manageFavorites = (music) => {
+    favorites(music);
+    this.setState({ favorites: getFavorites(), });
   }
 
   render() {
@@ -47,8 +61,14 @@ export default class AlbumScreen extends Component {
             {
               musics.map((music, index) => (
                 <div key={ index }>
-                  <h4>{ music.trackName }</h4>
-                  <audio data-testid="audio-component" src={ music.previewUrl } controls>
+                  <div>
+                    <i
+                      className={`fa-solid fa-star ${ this.verifyFavorite(music) && styles.favorite }`}
+                      onClick={ () => this.manageFavorites(music) }
+                    />
+                    <h4>{ music.trackName }</h4>
+                  </div>
+                  <audio src={ music.previewUrl } controls>
                     <track kind="captions" />
                       O seu navegador não suporta o elemento <code>audio</code>.
                   </audio>

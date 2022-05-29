@@ -9,7 +9,7 @@
 .Album header {
   height: 11.1vh;
   display: flex;
-  padding: 0 45px;
+  padding: 0 35px 0 45px;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid var(--mid-black);
@@ -74,13 +74,24 @@
   padding: 40px;
 } 
 
-.albunsContainer > div:nth-child(2) div {
+.albunsContainer > div:nth-child(2) > div {
   margin-bottom: 15px;
   width: 96.5%;
 }
 
-.albunsContainer > div:nth-child(2) div h4 {
+.albunsContainer > div:nth-child(2) > div > div {
+  display: flex;
+  align-items: baseline;
+  padding-left: 10px;
+}
+
+.albunsContainer > div:nth-child(2) > div > div > i {
+  cursor: pointer;
+}
+
+.albunsContainer > div:nth-child(2) > div > div > h4 {
   font-weight: 300;
+  margin-left: 7.5px;
 }
 
 .albunsContainer > div:nth-child(2) audio {
@@ -88,4 +99,20 @@
   margin-top: 7.5px;
   outline: none;
   border: none;
+}
+
+.favorite {
+  color: yellow;
+  animation: favoriteAnimation .4s ease-out;
+}
+
+@keyframes favoriteAnimation {
+  0% {
+    transform: scale(1.7);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }

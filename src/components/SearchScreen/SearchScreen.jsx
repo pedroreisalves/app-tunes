@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import homeImage from '../../images/home-image.svg';
 import { getAlbum } from '../../services/artist';
 import ProfileItem from '../ProfileItem/ProfileItem';
 import styles from './SearchScreen.module.css';
@@ -32,12 +33,16 @@ export default class SearchScreen extends Component {
               <input
                 value={ search }
                 onChange={ ({ target }) => this.setState({[target.id]: target.value}) }
+                onKeyUp={
+                  ({ key }) => (key === 'Enter' && search.length >= 2)
+                  && this.setAlbuns(search)
+                }
                 placeholder="Search for some artist"
                 id="search"
                 type="text"
               />
               <button
-                disabled={ search.length <= 2 }
+                disabled={ search.length < 2 }
                 onClick={ () => this.setAlbuns(search) }
               >
                 <i className="fa-solid fa-magnifying-glass"></i>
@@ -46,6 +51,15 @@ export default class SearchScreen extends Component {
           </div>
         </div>
         <div className={ styles.albunsContainer }>
+            {
+              !albuns.length
+              && (
+                <div className={ styles.startImage }>
+                  <img src={ homeImage } alt="homeImage" />
+                  <h2>Look for something different and discover new feelings.</h2>
+                </div>
+              )
+            }
             {
               albuns.map((album, i) => (
                 <Link key={ i } to={`/album/${album.collectionId}`}>
