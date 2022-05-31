@@ -30,7 +30,7 @@ export default class ProfileScreen extends Component {
             </div>
             <img src={ user.icon || defaultUser } alt={ user.username } />
             <h1>{ user.username }</h1>
-            <p>Favorites: { user.favorites.length } Songs</p>
+            <p>Favorites: { user.favorites.length } { user.favorites.length === 1 ? 'Song' : 'Songs' }</p>
             <p>Email: { user.email }</p>
             <p>Description: { user.description }</p>
           </div>

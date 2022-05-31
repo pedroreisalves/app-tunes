@@ -5,7 +5,8 @@ export const setUser = (email, username) => {
 }
 
 export const editUser = (email, username, icon, description) => {
-  localStorage.setItem('userInfo', JSON.stringify({ email, username, icon, description }))
+  const user = getUser();
+  localStorage.setItem('userInfo', JSON.stringify({ ...user, email, username, icon, description }))
 }
 
 export const getUser = () => JSON.parse(localStorage.getItem('userInfo'));

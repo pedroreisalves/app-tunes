@@ -9,7 +9,7 @@ export default class ProfileEdit extends Component {
     return (
       <>
         <SideBar history={ history } />
-        <ProfileEditScreen />
+        <ProfileEditScreen history={ history } />
       </>
     )
   }
