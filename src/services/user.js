@@ -1,6 +1,6 @@
 export const setUser = (email, username) => {
   localStorage.setItem('userInfo', JSON.stringify({
-    email, username, icon: '', description: '', favorites: []
+    email, username, icon: '', description: 'I am a App Tunes user. 😎', favorites: []
   }));
 }
 

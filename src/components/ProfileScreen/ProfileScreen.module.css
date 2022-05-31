@@ -27,3 +27,64 @@
   margin: 0 7.5px;
   font-size: 1rem;
 }
+
+.editProfile {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.editProfile button {
+  background-color: var(--pink);
+  padding: 5px 6.5px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: all .3s ease-out;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.editProfile button:hover {
+  background-color: var(--pink-heavy);
+}
+
+.userInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 88.7vh;
+}
+
+.userInfo > div {
+  color: var(--white);
+  border: 1px solid var(--mid-black);
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px 0;
+  position: relative;
+  border-radius: 10px;
+}
+
+.userInfo > div > h1 {
+  margin: 15px 0;
+}
+
+.userInfo > div > p {
+  font-weight: 300;
+}
+
+.userInfo > div > p:nth-child(5) {
+  margin: 10px 0;
+}
+
+.userInfo img {
+  width: 100px;
+  border: 1px solid var(--mid-black);
+  border-radius: 10px;
+}
