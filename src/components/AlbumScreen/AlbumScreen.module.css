@@ -97,8 +97,6 @@
 .albunsContainer > div:nth-child(2) audio {
   width: 100%;
   margin-top: 7.5px;
-  outline: none;
-  border: none;
 }
 
 .favorite {

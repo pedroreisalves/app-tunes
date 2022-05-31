@@ -63,6 +63,10 @@
   animation: joinRoute .5s ease-out;
 }
 
+.selectedRoute h4 {
+  font-weight: 400;
+}
+
 @keyframes joinRoute {
   0% {
     background-color: var(--black);

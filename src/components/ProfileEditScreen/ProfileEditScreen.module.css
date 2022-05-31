@@ -1,0 +1,29 @@
+.Edit {
+  min-height: 100vh;
+  width: 83%;
+  background-color: var(--black);
+  margin-left: 17%;
+  border: 1px solid var(--mid-black);
+}
+
+.Edit header {
+  height: 11vh;
+  display: flex;
+  padding: 0 35px 0 45px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--mid-black);
+}
+
+.Edit header div:nth-child(1) {
+  color: var(--light-grey);
+  display: flex;
+  font-weight: 300;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.Edit header div:nth-child(1) i {
+  margin: 0 7.5px;
+  font-size: 1rem;
+}

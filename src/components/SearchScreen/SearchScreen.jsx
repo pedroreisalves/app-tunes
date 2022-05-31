@@ -62,7 +62,7 @@ export default class SearchScreen extends Component {
             }
             {
               albuns.map((album, i) => (
-                <Link key={ i } to={`/album/${album.collectionId}`}>
+                <Link key={ i } to={`/search/${album.collectionId}`}>
                   <div
                     className={ styles.album }
                   >

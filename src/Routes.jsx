@@ -12,7 +12,7 @@ export default class Routes extends Component {
     return (
       <Switch>
         <Route path="/profile/edit" component={ ProfileEdit } />
-        <Route path="/album/:id" component={ Album } />
+        <Route path="/search/:id" component={ Album } />
         <Route path="/favorites" component={ Favorites } />
         <Route path="/profile" component={ Profile } />
         <Route path="/search" component={ Search } />

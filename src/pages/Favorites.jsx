@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import propTypes from 'prop-types';
 import SideBar from '../components/SideBar/SideBar'
+import FavoritesScreen from '../components/FavoritesScreen/FavoritesScreen';
 
 export default class Favorites extends Component {
   render() {
@@ -8,6 +9,7 @@ export default class Favorites extends Component {
     return (
       <>
         <SideBar history={ history } />
+        <FavoritesScreen />
       </>
     )
   }

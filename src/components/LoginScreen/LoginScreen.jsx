@@ -12,7 +12,7 @@ export default class LoginScreen extends Component {
 
   verify = (email, username) => {
     const emailRegex = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$/i;
-    return !(emailRegex.test(email) && username.length >= 6);
+    return !(emailRegex.test(email) && username.length >= 3);
   }
 
   login = (email, username) => {

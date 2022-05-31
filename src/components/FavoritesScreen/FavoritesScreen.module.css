@@ -1,0 +1,76 @@
+.Favorites {
+  min-height: 100vh;
+  width: 83%;
+  background-color: var(--black);
+  margin-left: 17%;
+  border: 1px solid var(--mid-black);
+}
+
+.Favorites header {
+  height: 11vh;
+  display: flex;
+  padding: 0 35px 0 45px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--mid-black);
+}
+
+.Favorites header div:nth-child(1) {
+  color: var(--light-grey);
+  display: flex;
+  font-weight: 300;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.Favorites header div:nth-child(1) i {
+  margin: 0 7.5px;
+  font-size: 1rem;
+}
+
+.favoritesContainer {
+  color: var(--white);
+  padding: 30px 40px;
+}
+
+.favoritesContainer h2 {
+  margin-bottom: 30px;
+}
+
+.favoritesContainer > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.favoritesContainer > div:nth-child(2) > div {
+  margin-bottom: 15px;
+  width: 96.5%;
+}
+
+.favoritesContainer > div:nth-child(2) > div audio {
+  width: 100%;
+  margin-top: 7.5px;
+  outline: none;
+  border: none;
+}
+
+.favoritesContainer > div:nth-child(2) > div > div {
+  display: flex;
+  align-items: baseline;
+  padding-left: 10px;
+}
+
+.favoritesContainer > div:nth-child(2) > div > div i {
+  cursor: pointer;
+}
+
+.favoritesContainer > div:nth-child(2) > div > div h4 {
+  font-weight: 300;
+  margin-left: 7.5px;
+}
+
+.favorite {
+  color: yellow;
+  animation: favoriteAnimation .4s ease-out;
+}

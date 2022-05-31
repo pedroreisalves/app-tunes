@@ -1,27 +1,15 @@
 import React, { Component } from 'react';
-import { getMusics } from '../../services/album';
-import { getFavorites, favorites } from '../../services/user';
+import { favorites, getFavorites } from '../../services/user';
 import ProfileItem from '../ProfileItem/ProfileItem';
-import styles from './AlbumScreen.module.css';
+import styles from './FavoritesScreen.module.css';
 
-export default class AlbumScreen extends Component {
+export default class FavoritesScreen extends Component {
   state = {
-    musics: [],
-    album: {},
     favorites: [],
   }
 
   componentDidMount() {
-    this.getAlbum();
     this.setState({ favorites: getFavorites(), });
-  }
-
-  getAlbum = async () => {
-    const { match: { params: { id } } } = this.props;
-    let musics = await getMusics(id);
-    const album = musics[0];
-    musics = musics.filter((_music, index) => index > 0);
-    this.setState({ musics, album });
   }
 
   verifyFavorite = (music) => {
@@ -36,37 +24,28 @@ export default class AlbumScreen extends Component {
   }
 
   render() {
-    const { musics, album } = this.state;
+    const { favorites } = this.state;
     return (
-      <div className={ styles.Album }>
+      <div className={ styles.Favorites }>
         <header>
           <div>
             <i className="fa-solid fa-angle-right"></i>
-            <span>Search</span>
-            <i className="fa-solid fa-angle-right"></i>
-            <span>{ album.collectionName }</span>
+            <span>Favorites</span>
           </div>
           <ProfileItem />
         </header>
-        <div className={ styles.albunsContainer }>
-          <div>
-            <img src={ album.artworkUrl100 } alt="cover-album" />
-            <div>
-              <h3>{ album.collectionName }</h3>
-              <p>{ album.artistName }</p>
-              <p>{ album.primaryGenreName }</p>
-            </div>
-          </div>
+        <div className={ styles.favoritesContainer }>
+          <h2>Favorites:</h2>
           <div>
             {
-              musics.map((music, index) => (
+              favorites.map((music, index) => (
                 <div key={ index }>
                   <div>
                     <i
                       className={`fa-solid fa-star ${ this.verifyFavorite(music) && styles.favorite }`}
                       onClick={ () => this.manageFavorites(music) }
                     />
-                    <h4><strong>{ music.trackName }</strong></h4>
+                    <h4><strong>{ music.trackName }</strong> - { music.artistName }</h4>
                   </div>
                   <audio src={ music.previewUrl } controls>
                     <track kind="captions" />
